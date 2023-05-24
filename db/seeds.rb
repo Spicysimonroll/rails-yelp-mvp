@@ -14,7 +14,8 @@ Restaurant.destroy_all
 categories = %w[chinese italian japanese french belgian]
 
 puts 'Seeding you database...'
+
 5.times do
-  Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.street_address, category: categories[rand(categories.size)])
+  Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.street_address, category: categories[rand(categories.size)], phone_number: Faker::PhoneNumber.phone_number)
 end
 puts 'Done!'
